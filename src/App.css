@@ -2,7 +2,7 @@
   /* background-color: #181a1b; */
   min-height: 100vh;
   font-family: "Segoe UI";
-  color: #dad7d2;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -13,25 +13,31 @@ header {
   width: 100vw;
 }
 
+.container {
+  width: 70rem;
+}
+
 .navbar-container {
   box-sizing: border-box;
   display: flex;
-  padding: 2rem;
-  width: 72rem;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.navbar-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar-logo {
   height: 2rem;
 }
 
-nav {
-  margin-left: auto !important;
-}
-
 .nav-button {
   box-sizing: border-box;
   margin-left: 2rem;
   cursor: pointer;
+  user-select: none;
 }
 
 .nav-button:hover {
@@ -39,13 +45,27 @@ nav {
 }
 
 .mobile-nav-hamburger {
-  color: rgb(255, 255, 255);
-  background-color: rgb(171, 133, 1);
+  background-color: #fed136;
   padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   margin-left: auto !important;
   display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.mobile-nav-container {
+  display: flex;
+  flex-direction: column;
+  transition: height 0.5s;
+  overflow: hidden;
+}
+
+.mobile-nav-button {
+  margin-left: 0rem;
+  padding: 0.5rem 0 0.5rem 0;
+  width: 100%;
 }
 
 .welcome-section {
@@ -55,11 +75,44 @@ nav {
   background-position: center center;
   background-size: cover;
   height: 50rem;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.welcome-upper-text {
+  font-size: 2.25rem;
+  font-style: italic;
+}
+
+.welcome-lower-text {
+  margin-top: 1rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.welcome-learn-more {
+  margin-top: 3rem;
+  background-color: #fed136;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 @media (max-width: 1200px) {
-  .navbar-container {
-    width: 60rem;
+  .container {
+    width: 57rem;
   }
 }
 
@@ -67,24 +120,40 @@ nav {
   header {
     background-color: #232527;
   }
-  .navbar-container {
-    padding: 1.25rem;
-    align-items: center;
+  .container {
     width: 46rem;
+  }
+  .navbar-container {
+    margin: 1.25rem;
+  }
+  .navbar-row {
+    align-items: center;
   }
   .navbar-logo {
     height: 1.5rem;
   }
-  nav {
+  .desktop-nav-container {
     display: none;
   }
   .mobile-nav-hamburger {
     display: block;
   }
+  .welcome-section {
+    height: 35rem;
+  }
+  .welcome-upper-text {
+    font-size: 1.75rem;
+  }
+  .welcome-lower-text {
+    font-size: 3.75rem;
+  }
+  .welcome-learn-more {
+    margin-top: 1rem;
+  }
 }
 
-@media (max-width: 770px) {
-  .navbar-container {
+@media (max-width: 780px) {
+  .container {
     width: 35rem;
   }
 }
