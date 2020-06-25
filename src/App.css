@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  /* background-color: #181a1b; */
   min-height: 100vh;
+  font-family: "Segoe UI";
+  color: #dad7d2;
+  font-weight: 500;
+}
+
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: fixed;
+  width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-container {
+  box-sizing: border-box;
+  display: flex;
+  padding: 2rem;
+  width: 72rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-logo {
+  height: 2rem;
+}
+
+nav {
+  margin-left: auto !important;
+}
+
+.nav-button {
+  box-sizing: border-box;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  color: #fed136;
+}
+
+.mobile-nav-hamburger {
+  color: rgb(255, 255, 255);
+  background-color: rgb(171, 133, 1);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  border-radius: 0.4rem;
+  margin-left: auto !important;
+  display: none;
+}
+
+.welcome-section {
+  background-image: url("header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 50rem;
+}
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    width: 60rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 990px) {
+  header {
+    background-color: #232527;
+  }
+  .navbar-container {
+    padding: 1.25rem;
+    align-items: center;
+    width: 46rem;
+  }
+  .navbar-logo {
+    height: 1.5rem;
+  }
+  nav {
+    display: none;
+  }
+  .mobile-nav-hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 770px) {
+  .navbar-container {
+    width: 35rem;
   }
 }
